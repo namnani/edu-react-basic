@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+// import App from './App';
+import Root from './Root'
 import './index.css';
 import jsx from './jsx/jsx'
-import Parent from './lifeCycle/Parent'
 
 window.jsx = jsx;
 
 ReactDOM.render(
-  <Parent />,
+  <Root />,
   document.getElementById('root')
 );
 

@@ -29,6 +29,7 @@ class Child extends Component {
 
     shouldComponentUpdate() {
         log(componentName, 'shouldComponentUpdate');
+        return true;
     }
 
     componentWillUpdate() {
@@ -44,7 +45,12 @@ class Child extends Component {
 
     render() {
         log(componentName, 'render');
-        return <div>{componentName}</div>;
+        return (
+          <div>
+            <span>{componentName}</span>
+            <span>count: {this.props.count}</span>
+          </div>
+        );
     }
 }
 

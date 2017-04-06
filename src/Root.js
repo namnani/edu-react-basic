@@ -1,0 +1,24 @@
+import React, { Component } from 'react';
+import Parent from './lifeCycle/Parent'
+
+class Root extends Component {
+  constructor() {
+    super();
+    this.state = { count: 0 };
+  }
+
+  onClick = () => {
+    this.setState({ count: this.state.count + 1 })
+  }
+
+  render() {
+    return (
+      <div>
+        <div onClick={this.onClick}>Root</div>
+        <Parent count={this.state.count} />
+      </div>
+    )
+  }
+}
+
+export default Root;

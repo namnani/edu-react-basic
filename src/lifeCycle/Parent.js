@@ -30,12 +30,13 @@ class Parent extends Component {
 
     shouldComponentUpdate() {
         log(componentName, 'shouldComponentUpdate');
+        return true;
     }
 
     componentWillUpdate() {
         log(componentName, 'componentWillUpdate');
     }
-    
+
     // render () {}
 
     componentDidUpdate() {
@@ -47,10 +48,11 @@ class Parent extends Component {
         log(componentName, 'render');
         return (
             <div>
-                {componentName}
-                <Child love='infinite' />
+            <span>{componentName}</span>
+            <span>count: {this.props.count}</span>
+            <Child count={this.props.count} />
             </div>
-        )
+        );
     }
 }
 
