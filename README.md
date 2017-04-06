@@ -1,13 +1,15 @@
 # React Basic
 
-## 사전 준비 사항
-- code editor 설치
-- node 설치
-- 코드 저장소 clone `$ git clone `
-- `$ yarn install`
-- `$ yarn run`
-- 크롬/웨일 React 플러그인 설치
-- 크로/웨일 Redux 플러그인 설치 
+## 사전 준비
+- 코드 저장소 clone  
+  `$ git clone https://oss.navercorp.com/youngje-yun/edu-react.git`
+- package 설치  
+ `$ cd edu-react && yarn install`
+- 실행  
+  `$ yarn run`
+- 브라우저(Chrome/Whale) extension 설치 
+  - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) 설치
+  - [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) 설치 
 
 ## 목차
 
