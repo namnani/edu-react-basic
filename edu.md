@@ -1,14 +1,5 @@
 # React Basic
 
-## 사전 준비 사항
-- code editor 설치
-- node 설치
-- 코드 저장소 clone 
-- `$ yarn install`
-- `$ yarn run`
-- 크롬/웨일 React 플러그인 설치
-- 크로/웨일 Redux 플러그인 설치 
-
 ## 목차
 
 ### React 이해 
@@ -37,6 +28,8 @@ React?
 f(data) = View
 ```
 
+자유도가 높다.
+
 ### 1. jsx 이해 
 ```js
 const Hello =  <h1 className='greeting'>Hello World!</h1>;
@@ -50,8 +43,7 @@ var Hello = React.createElement(
 );
 ```
 
-- jsx는 html + js
-
+- jsx는 ReactElement (html + js)
 - javascript 들어가야 하는 부분에 `{}` 넣고 사용
 
 #### 태그 규칙 
@@ -76,8 +68,42 @@ function oddOrEven(props) {
   return <div>{props.number}은 {type}입니다.</div>;
 }
 ``` 
-
 #### 주의 사항 
 - JSX 코드 scope 안에 React 선언 필요
 - props의 기본값은 true
+- Single parent(16.0에서 개선 예정)
+- Array로 반환하는 경우 `key` prop을 꼭 추가한다
+- 실제 DOM은 아니다
+- white space
+
+### 2. React Component 이해
+  - lifecycle method
+  - properties
+
+
+### 3. ReactDOM/ReactDOMServer 이해 
+  - render, renderToString, renderToStaticMarkup 비교 
+
+
+### 4. React event handling 이해 
+
+
+### 5. React 방식으로 사고하기 - Thinking in React 
+
+
+## Redux 이해 
+
+- `connect()` - HOC [component](https://github.com/reactjs/react-redux/blob/4d302257e3b361731f44b1f546e547ed578c8eec/src/components/connectAdvanced.js#L115)
 - 
+
+### 6. Redux 이해하기 
+  - action & actionCreator
+  - reducer
+  - store
+
+### 7.  React와 Redux 사용하기
+
+
+### 8. Redux middleware
+
+
