@@ -1,27 +1,5 @@
 # React Basic
 
-## 목차
-
-### React 이해
-
-1. JSX 이해
-1. React Component 이해
-  - lifecycle method
-  - properties
-1. ReactDOM/ReactDOMServer 이해
-  - render, renderToString, renderToStaticMarkup 비교
-1. React event handling 이해
-1. React 방식으로 사고하기 - Thinking in React
-
-### Redux 이해
-
-1. Redux 이해하기
-  - action & actionCreator
-  - reducer
-  - store
-1. React와 Redux 사용하기
-1. Redux middleware
-
 ## React 이해
 
 React?
@@ -72,8 +50,10 @@ function oddOrEven(props) {
 
   return <div>{props.number}은 {type}입니다.</div>;
 }
-``` 
-#### 주의 사항 
+```
+
+#### 주의 사항
+
 - JSX 코드 scope 안에 React 선언 필요
 - props의 기본값은 true
 - Single parent(16.0에서 개선 예정)
@@ -81,34 +61,82 @@ function oddOrEven(props) {
 - 실제 DOM은 아니다
 - white space
 
-### 2. React Component 이해
-  - lifecycle method
-  - properties
+### 2. React Component 이해 [#](https://facebook.github.io/react/docs/react-component.html#componentwillreceiveprops)
 
+### Component 구현 3가지 방법
 
-### 3. ReactDOM/ReactDOMServer 이해 
-  - render, renderToString, renderToStaticMarkup 비교 
+1. Extends React.Component(React.PureComponent)
+1. Functional Component(Stateliess Component)
+1. [React.createClass(deprecated)](https://facebook.github.io/react/blog/#migrating-from-react.createclass)
 
+#### lifecycle method
 
-### 4. React event handling 이해 
+- Mounting
+  - `constructor()`
+  - `componentWillMount()`
+  - `render()`
+  - `componentDidMount()`
 
+- Updating
+  - `componentWillReceiveProps()`
+  - `shouldComponentUpdate()`
+  - `componentWillUpdate()`
+  - `render()`
+  - `componentDidUpdate()`
 
-### 5. React 방식으로 사고하기 - Thinking in React 
+- Unmounting
+  - `componentWillUnmount()`
 
+![image](http://d2.naver.com/content/images/2017/03/helloworld-201702-React2-04-1.png)
 
-## Redux 이해 
+#### properties
+
+### 3. ReactDOM/ReactDOMServer 이해
+
+#### ReactDOM
+
+- render()
+
+```js
+ReactDOM.render(
+  reactElement,
+  containerDOM,
+  [callback]
+)
+```
+
+- unmountComponentAtNode()
+
+```js
+ReactDOM.unmountComponentAtNode(containerDOM)
+```
+
+- findDOMNode(): ref로 대체 가능, functional component 사용 안됨
+
+```js
+ReactDOM.findDOMNode(component)
+```
+
+#### ReactDOMServer
+
+- render, renderToString, renderToStaticMarkup 비교
+
+### 4. React event handling 이해
+
+### 5. React 방식으로 사고하기 - Thinking in React
+
+- https://facebook.github.io/react/docs/thinking-in-react.html
+
+## Redux 이해
 
 - `connect()` - HOC [component](https://github.com/reactjs/react-redux/blob/4d302257e3b361731f44b1f546e547ed578c8eec/src/components/connectAdvanced.js#L115)
-- 
 
-### 6. Redux 이해하기 
-  - action & actionCreator
-  - reducer
-  - store
+### 6. Redux 이해하기
+
+- action & actionCreator
+- reducer
+- store
 
 ### 7.  React와 Redux 사용하기
 
-
 ### 8. Redux middleware
-
-
