@@ -3,3 +3,21 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+div {
+  position: relative;
+  min-height: 50px;
+  min-width: 200px;
+  padding: 
+}
+
+button {
+  font-size: 12px;
+  color: #444;
+  border: 1px solid #e5e8ef;
+  padding: 0 5px;
+  margin: 5px 5px;
+  height: 22px;
+  line-height: 23px;
+  text-decoration: none!important;
+}

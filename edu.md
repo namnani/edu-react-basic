@@ -65,8 +65,8 @@ function oddOrEven(props) {
 
 #### Component 구현 3가지 방법
 
-1. Extends React.Component(React.PureComponent)
-1. Functional Component(Stateliess Component)
+1. Extends React.Component(or React.PureComponent)
+1. Functional Component(Stateless Component)
 1. [React.createClass(deprecated)](https://facebook.github.io/react/blog/#migrating-from-react.createclass)
 
 #### lifecycle method
@@ -87,7 +87,13 @@ function oddOrEven(props) {
 - Unmounting
   - `componentWillUnmount()`
 
-![image](http://d2.naver.com/content/images/2017/03/helloworld-201702-React2-04-1.png)
+![React Component lifecycle](https://oss.navercorp.com/youngje-yun/edu-react-basic/raw/master/public/img/react-component-lifecycle.png)
+
+#### Other APIs
+
+- setState()
+
+- forceUpdate()
 
 #### properties
 

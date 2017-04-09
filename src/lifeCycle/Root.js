@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Parent from './lifeCycle/Parent'
+import Parent from './Parent'
 
 class Root extends Component {
   constructor() {
