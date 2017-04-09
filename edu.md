@@ -63,7 +63,7 @@ function oddOrEven(props) {
 
 ### 2. React Component 이해 [#](https://facebook.github.io/react/docs/react-component.html#componentwillreceiveprops)
 
-### Component 구현 3가지 방법
+#### Component 구현 3가지 방법
 
 1. Extends React.Component(React.PureComponent)
 1. Functional Component(Stateliess Component)
