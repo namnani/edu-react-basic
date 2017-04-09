@@ -1,17 +1,18 @@
-import React from 'react'
-
-const helloElement = <h1>Hello!</h1>;
-const goodbyeElement = <h1>Good Bye!</h1>;
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import console from '../util/console';
 
 const elements = {
-  hello: helloElement,
-  goodbye: goodbyeElement,
-}
+  hello: () => <h1>Hello!</h1>,
+  goodbye: () => <h1>Good Bye!</h1>,
+};
 
 function getElementByType(type) {
   return elements[type];
 }
 
 const Message = getElementByType('hello');
+console.log(ReactDOMServer.renderToStaticMarkup(<Message />));
 
-export { Message, elements }
+const AOrDiv = true ? 'a' : 'div';
+console.log(ReactDOMServer.renderToStaticMarkup(<AOrDiv>안녕</AOrDiv>));

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import console from '../util/console';
-import Child from './Child';
+// import Child from './Child';
 
 const log = console.highlightWith('red');
 const componentName = 'Parent';
 
 class Parent extends Component {
   /* Mount Start */
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = { test: true };
     log(componentName, 'constructor');
   }
 
@@ -45,13 +46,17 @@ class Parent extends Component {
   }
   /* Update End */
 
+  // update = () => {
+  //   this.setState({ test: !this.state.test })
+  // }
+
   render() {
     log(componentName, 'render');
     return (
       <div>
         <span>{componentName}</span>
-        <span>count: {this.props.count}</span>
-        <Child count={this.props.count} />
+        <span>Count: {this.props.count}</span>
+        {/* <Child count={this.props.count} /> */}
       </div>
     );
   }

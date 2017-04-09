@@ -19,7 +19,8 @@
     "react/sort-comp": "off",
     "no-nested-ternary": "off",
     "no-confusing-arrow": "off",
-    "jsx-a11y/no-static-element-interactions": "off"
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/prop-types": "off"
   },
   "globals": {
     "window": true,

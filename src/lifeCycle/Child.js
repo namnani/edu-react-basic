@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import console from '../util/console';
+// import GrandChild from './GrandChild'
 
-const log = console.highlightWith('red');
-const componentName = 'Parent';
+const log = console.highlightWith('blue');
+const componentName = 'Child';
 
 class Child extends Component {
   /* Mount Start */
@@ -49,7 +50,7 @@ class Child extends Component {
     return (
       <div>
         <span>{componentName}</span>
-        <span>count: {this.props.count}</span>
+        <span>Count: {this.props.count}</span>
       </div>
     );
   }

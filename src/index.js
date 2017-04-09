@@ -1,7 +1,9 @@
+/* eslint no-unused-vars: off, import/first: off */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+/* default */
 import App from './App';
 
 ReactDOM.render(
@@ -11,23 +13,33 @@ ReactDOM.render(
 
 /* jsx */
 // import jsx from './jsx/jsx';
-// window.jsx = jsx;
 
+/* conditional jsx */
+// import conditional from './jsx/conditionalJsx';
+
+/* caution */
+// import caution from './jsx/caution';
+
+/* list */
+// import list from './jsx/list';
+
+/* white space */
+// import whiteSpace from './jsx/whitespace';
 
 /* lifeCycle */
 // import Root from './lifeCycle/Root';
 
-// ReactDOM.render(
-//   <Root />,
-//   document.getElementById('root')
-// );
-
-
 /* setState */
 // import StateTest from './reactComponent/setState';
 
-// ReactDOM.render(
-//   <StateTest />,
-//   document.getElementById('root')
-// );
+/* default props */
+// import defaultProps from './reactComponent/defaultProps';
 
+/* render compare */
+// import serverRender from './render/serverRender';
+
+/* event preventDefault */
+// import preventDefault from './event/preventDefault';
+
+/* avoid inline function */
+// import inlineFunction from './event/inlineFunction';

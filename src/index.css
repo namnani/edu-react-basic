@@ -1,23 +1,81 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 10px;
+  padding: 10px;
   font-family: sans-serif;
-}
-
-div {
-  position: relative;
-  min-height: 50px;
-  min-width: 200px;
-  padding: 
+  font-size: 20px;
 }
 
 button {
-  font-size: 12px;
-  color: #444;
-  border: 1px solid #e5e8ef;
-  padding: 0 5px;
-  margin: 5px 5px;
-  height: 22px;
-  line-height: 23px;
-  text-decoration: none!important;
+  background: rgb(142, 228, 104);
+  color: rgb(66,66,66);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  border: none;
+  border-radius: 2px;
+  color: #000;
+  position: relative;
+  height: 36px;
+  margin: 0;
+  min-width: 64px;
+  padding: 0 16px;
+  display: inline-block;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  overflow: hidden;
+  will-change: box-shadow;
+  transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 36px;
+  vertical-align: middle;
+}
+
+.set-state {
+  width: 50%;
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.hmb_tbl table {
+    font-family: '돋움',Dotum,Helvetica;
+    width: 100%;
+    margin-top: -30px;
+    margin-bottom: -1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.hmb_tbl caption {
+    height: 30px;
+    text-indent: 0;
+}
+caption {
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.hmb_tbl thead th {
+    padding: 8px 0 6px;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: #fbfbfb;
+    color: #999;
+    font-weight: normal;
+    font-size: 11px;
+    letter-spacing: -1px;
+}
+
+.hmb_tbl tbody th, .hmb_tbl tbody td {
+    font-family: '돋움',Dotum,Helvetica;
+    padding: 10px 0 7px;
+    border-bottom: 1px solid #f2f2f2;
+    color: #222;
+    text-align: center;
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Parent from './Parent'
 
 class Root extends Component {
@@ -21,4 +22,7 @@ class Root extends Component {
   }
 }
 
-export default Root;
+ReactDOM.render(
+  <Root />,
+  document.getElementById('root')
+);

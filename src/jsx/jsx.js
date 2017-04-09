@@ -17,7 +17,7 @@ Greeting.propTypes = {
   name: PropTypes.string
 }
 
-export default {
+window.jsx = {
   helloElement,
   helloWrapper,
   Greeting,
