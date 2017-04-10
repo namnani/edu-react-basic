@@ -1,14 +1,5 @@
 # Redux 이해
 
-## State Tree
-
-- Redux Application은 한 개의 State Tree를 가진다.
-- State Tree는 javascript object이다.
-
-## Pure function
-
-- `connect()` - HOC [component](https://github.com/reactjs/react-redux/blob/4d302257e3b361731f44b1f546e547ed578c8eec/src/components/connectAdvanced.js#L115)
-
 ## 6. Redux 이해하기
 
 - store
@@ -22,19 +13,21 @@
 - initialize with `createStore(reducer, [preloadedState], [enhancer])`
 - state를 수정하기 위해서는 `dispatch(action)` 호출
 - state 접근을 위해서는 `getState()` 호출
+- state 변경 감지를 위해서는 `subscribe(listener)` 등록
 
-- action & actionCreator
-  - action: pure object
-  - actionCreator: generate action
-- reducer
-  - pure function
-  ```js
-  f(state, action) = newState
-  ```
-- store
-  - initialize with `createStore()`
-  - getState()
-  - dispatch()
+### action & actionCreator
+
+- action: pure object
+- actionCreator: generate action
+
+### reducer
+
+- pure function
+- immutable
+
+```js
+f(state, action) = newState
+```
 
 ## 7. React와 Redux 사용하기
 
@@ -47,7 +40,7 @@
 
 - react-redux
   - `<Provider store />`
-  - `connect()`
+  - `connect()` - HOC [component](https://github.com/reactjs/react-redux/blob/4d302257e3b361731f44b1f546e547ed578c8eec/src/components/connectAdvanced.js#L115)
 
 ## 8. Redux middleware
 

@@ -4,12 +4,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 /* default */
-import App from './App';
+// import App from './App';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('root')
+// );
 
 /* jsx */
 // import jsx from './jsx/jsx';
@@ -43,3 +43,6 @@ ReactDOM.render(
 
 /* avoid inline function */
 // import inlineFunction from './event/inlineFunction';
+
+/* redux without react */
+import withoutReact from './redux/withoutReact';
