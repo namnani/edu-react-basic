@@ -46,6 +46,11 @@ class Parent extends Component {
   }
   /* Update End */
 
+  /* Unmount Start */
+  componentWillUnmount() {
+    log(componentName, 'componentWillUnmount');
+  }
+
   // update = () => {
   //   this.setState({ test: !this.state.test })
   // }

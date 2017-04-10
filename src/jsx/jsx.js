@@ -9,8 +9,8 @@ const helloWrapper = (
   </div>
 );
 
-const Greeting = ({ name = '아무개' }) => (
-  <div>{name}님 반갑습니다!</div>
+const Greeting = ({ name = '아무개', message }) => (
+  <div>{name}님 {message}!</div>
 );
 
 Greeting.propTypes = {

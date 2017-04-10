@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const TestElement = ({ test }) => {
   console.log(test);
-  return <div>test</div>;
+  return <div>TestElement</div>;
 }
 
 ReactDOM.render(
@@ -12,7 +12,7 @@ ReactDOM.render(
 )
 
 const InvalidElement = (
-  <div>하하</div>
+  <div>하하</div>,
   <div>호호</div>
 );
 
