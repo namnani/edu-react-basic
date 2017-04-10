@@ -9,12 +9,12 @@
 
   - package 설치
 
-    `$ npm install -g yarn` // yarn 설치 안 되어 있을 경우 yarn 설치
-    `$ cd edu-react && yarn install`
+    - `$ npm install -g yarn` // yarn 설치 안 되어 있을 경우 yarn 설치
+    - `$ cd edu-react && yarn install`
 
   - 실행
 
-    `$ yarn run`
+    `$ yarn start`
 
 - 브라우저(Chrome/Whale) extension 설치
   - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) 설치
