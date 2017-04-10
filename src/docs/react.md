@@ -265,8 +265,60 @@ ReactDOM.findDOMNode(component)
   - DOM 조작을 React와 library에서 같이 하는 일이 없도록 주의
   - 예시: [플레이스에서 jindo 사용 예제](https://oss.navercorp.com/bizServiceLab/sogum-next/blob/9eabbf5f175cfa3822c433e40917488efe23a55f/src/components/commons/ContentFlicking/ContentFlicking.js)
 
-## 추가적으로 읽으면 좋은 글
+## 추가로 읽으면 좋은 글
 
 - [React 공식 문서](https://facebook.github.io/react/docs/hello-world.html)
 - [React 적용 가이드 - React 작동 방법](http://d2.naver.com/helloworld/9297403)
 - [Functional setState is the future of React](https://medium.freecodecamp.com/functional-setstate-is-the-future-of-react-374f30401b6b?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+## Refs and DOM
+
+refs 사용하기 좋은 곳
+
+- animation 제어를 해야할 때
+- focus, text 선택 제어가 필요할 때(DOM API 호출을 해야할 때)
+- 외부 DOM Library 사용할 때
+
+그 외에는 되도록 사용하지 않는 것이 좋다.
+
+`@refs/dom`
+
+- refs는 DOM Element, React Component에 모두 할당 가능
+- 단, React Component에 refs 할당 하려면 해당 React Component가 class 로 생성된 Component 여야함
+- Functional Component에서도 내부에서 접근 하는 용도로는 사용 가능
+
+`@refs/component`
+
+## context
+
+- 하위 모든 React Component에 data를 바로 전달할 수 있는 강력한 api
+
+하지만,
+
+- 안정성을 위한다면 사용하지 않는 것이 좋다.
+- Redux나 MobX에 익숙하지 않다면 사용하지 않는 것이 좋다.
+- React에 익숙하지 않다면 사용하지 않는 것이 좋다.
+
+그래도 사용해야 한다면,
+
+- context api 사용을 바로 하기 보다는 감싸서 사용 권장.
+- context를 업데이트 하지 말아라.
+
+### 사용 예시
+
+`@context/context`
+
+### lifecycle에서 context 접근
+
+- `constructor(props, context)`
+- `componentWillReceiveProps(nextProps, nextContext)`
+- `shouldComponentUpdate(nextProps, nextState, nextContext)`
+- `componentWillUpdate(nextProps, nextState, nextContext)`
+- `componentDidUpdate(prevProps, prevState, prevContext)`
+
+### Functional Component에서 접근
+
+- `contextTypes` property 설정
+- 함수의 두 번째 인자로 `context` 접근 가능
+
+`@context/statelessFunction`
