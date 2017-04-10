@@ -14,7 +14,30 @@ const baseballTeams = [
   { name: '삼성', rank: 10, games: 8, win: 1, draw: 0, lose: 7 }
 ];
 
+const TeamRow = ({ team }) => {
+  const { name, rank, games, win, draw, lose } = team;
+
+  return (
+    <tr>
+      <th scope="row"><span>{rank}</span></th>
+      <td>
+        <div className="wrap">
+          <div className="info">
+            <span className="name">{name}</span>
+          </div>
+        </div>
+      </td>
+      <td><span>{games}</span></td>
+      <td><span>{win}</span></td>
+      <td><span>{draw}</span></td>
+      <td><span>{lose}</span></td>
+    </tr>
+  );
+}
+
 const TeamRank = ({ teams }) => {
+  const teamList = teams.map((team, index) => <TeamRow key={index} team={team} />)
+
   return (
     <div className="hmb_tbl">
       <table className="kbo">
@@ -30,20 +53,7 @@ const TeamRank = ({ teams }) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row"><span>10</span></th>
-            <td>
-              <div className="wrap">
-                <div className="info">
-                  <span className="name">삼성</span>
-                </div>
-              </div>
-            </td>
-            <td><span className="">8</span></td>
-            <td><span className="">1</span></td>
-            <td><span className="">0</span></td>
-            <td><span className="">7</span></td>
-          </tr>
+          {teamList}
         </tbody>
       </table>
     </div>
