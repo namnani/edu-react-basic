@@ -7,16 +7,18 @@ import Counter from './CounterWithConnect';
 const reducer = (state = 0, action) => {
   switch (action.type) {
     case 'INCREMENT':
-      return state + 1
+      return state + 1;
     case 'DECREMENT':
-      return state - 1
+      return state - 1;
     default:
-      return state
+      return state;
   }
 }
 
-const store = createStore(reducer)
-const root = document.getElementById('root')
+// https://github.com/zalmoxisus/redux-devtools-extension#redux-devtools-extension
+
+const store = createStore(reducer);
+const root = document.getElementById('root');
 
 const render = () => {
   ReactDOM.render(
