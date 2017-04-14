@@ -26,7 +26,7 @@
 
 ## 목차
 
-### React 이해
+### [React 이해](https://oss.navercorp.com/youngje-yun/edu-react-basic/wiki/React-%EC%9D%B4%ED%95%B4)
 
 1. JSX 이해
 1. React Component 이해
@@ -37,7 +37,7 @@
 1. React event handling 이해
 1. React 방식으로 사고하기 - Thinking in React
 
-### Redux 이해
+### [Redux 이해](https://oss.navercorp.com/youngje-yun/edu-react-basic/wiki/Redux-%EC%9D%B4%ED%95%B4)
 
 1. Redux 이해하기
   - action & actionCreator
