@@ -10,7 +10,7 @@ f(data) = View
 - 자유도가 높다.
 - [React Native](http://facebook.github.io/react-native/), [React VR](https://developer.oculus.com/blog/introducing-the-react-vr-pre-release/)
 
-## 0. React Element & React Component [#](https://facebook.github.io/react/blog/2015/12/18/react-components-elements-and-instances.html)
+## 1. React Element & React Component [#](https://facebook.github.io/react/blog/2015/12/18/react-components-elements-and-instances.html)
 
 ### React Element
 
@@ -71,7 +71,7 @@ f(data) = View
 }
 ```
 
-## 1. jsx 이해
+## 2. JSX 이해
 
 ```js
 const hello = <h1 className='greeting'>Hello World!</h1>;
@@ -126,7 +126,7 @@ function oddOrEven(props) {
 - 실제 DOM은 아니다
 - white space `@jsx/whitespace`
 
-## 2. React Component 이해 [#](https://facebook.github.io/react/docs/react-component.html)
+## 3. React Component 이해 [#](https://facebook.github.io/react/docs/react-component.html)
 
 ### Component 구현 3가지 방법
 
@@ -187,7 +187,7 @@ function oddOrEven(props) {
 
 ![React Component lifecycle](https://oss.navercorp.com/youngje-yun/edu-react-basic/raw/master/public/img/react-component-lifecycle.png)
 
-## 3. ReactDOM/ReactDOMServer 이해
+## 4. ReactDOM/ReactDOMServer 이해
 
 ### ReactDOM
 
@@ -224,7 +224,7 @@ ReactDOM.findDOMNode(component)
 - renderToStaticMarkup()
   - 단순 static 마크업 생성
 
-## 4. React event handling 이해
+## 5. React event handling 이해
 
 - 실제 DOM element의 event handling과 비슷
 - 차이
@@ -247,31 +247,7 @@ ReactDOM.findDOMNode(component)
 - `addEventLinstener()` 사용할 필요 없음
 - function을 prop으로 전달하는 경우 re-render를 피하기 위해 jsx inline function 바로 사용은 좋지 않음 `@event/inlineFunction`
 
-## 5. React 방식으로 사고하기 - [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
-
-- Mock 준비
-- 화면을 나눠서 컴포넌트 만들기
-- 정적(static) 버전 만들기(state 사용 금지)
-- state와 props 구별
-
-## Tip
-
-### 외부 library(ex> jQuery)와 함께 React 사용하기
-
-- 되도록 사용안 할 수 있으면 사용 안하는 것이 좋다.
-- 대체재: [Awesome React](https://github.com/enaqx/awesome-react)
-- 그래도 꼭 사용해야한다면
-  - Wrapping 하는 Component 생성
-  - DOM 조작을 React와 library에서 같이 하는 일이 없도록 주의
-  - 예시: [플레이스에서 jindo 사용 예제](https://oss.navercorp.com/bizServiceLab/sogum-next/blob/9eabbf5f175cfa3822c433e40917488efe23a55f/src/components/commons/ContentFlicking/ContentFlicking.js)
-
-## 추가로 읽으면 좋은 글
-
-- [React 공식 문서](https://facebook.github.io/react/docs/hello-world.html)
-- [React 적용 가이드 - React 작동 방법](http://d2.naver.com/helloworld/9297403)
-- [Functional setState is the future of React](https://medium.freecodecamp.com/functional-setstate-is-the-future-of-react-374f30401b6b?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
-
-## Refs and DOM
+## 6. React에서의 DOM 제어(Refs and DOM)
 
 refs 사용하기 좋은 곳
 
@@ -289,7 +265,7 @@ refs 사용하기 좋은 곳
 
 `@refs/component`
 
-## context
+## 7. context 소개
 
 - 하위 모든 React Component에 data를 바로 전달할 수 있는 강력한 api
 
@@ -322,3 +298,27 @@ refs 사용하기 좋은 곳
 - 함수의 두 번째 인자로 `context` 접근 가능
 
 `@context/statelessFunction`
+
+## 8. React 방식으로 사고하기 - [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
+
+- Mock 준비
+- 화면을 나눠서 컴포넌트 만들기
+- 정적(static) 버전 만들기(state 사용 금지)
+- state와 props 구별
+
+## Tip
+
+### 외부 library(ex> jQuery)와 함께 React 사용하기
+
+- 되도록 사용안 할 수 있으면 사용 안하는 것이 좋다.
+- 대체재: [Awesome React](https://github.com/enaqx/awesome-react)
+- 그래도 꼭 사용해야한다면
+  - Wrapping 하는 Component 생성
+  - DOM 조작을 React와 library에서 같이 하는 일이 없도록 주의
+  - 예시: [플레이스에서 jindo 사용 예제](https://oss.navercorp.com/bizServiceLab/sogum-next/blob/9eabbf5f175cfa3822c433e40917488efe23a55f/src/components/commons/ContentFlicking/ContentFlicking.js)
+
+## 추가로 읽으면 좋은 글
+
+- [React 공식 문서](https://facebook.github.io/react/docs/hello-world.html)
+- [React 적용 가이드 - React 작동 방법](http://d2.naver.com/helloworld/9297403)
+- [Functional setState is the future of React](https://medium.freecodecamp.com/functional-setstate-is-the-future-of-react-374f30401b6b?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)

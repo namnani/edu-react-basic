@@ -1,6 +1,6 @@
 # Redux 이해
 
-## 6. Redux 이해하기 [#](http://d2.naver.com/helloworld/4966453)
+## 1. Redux 이해하기 [#](http://d2.naver.com/helloworld/4966453)
 
 Application의 state 관리 하는 library (2KB)
 
@@ -45,7 +45,7 @@ f(state, action) = newState
 
 `@redux/withoutReact`
 
-## 7. React와 Redux 사용하기
+## 2. React와 Redux 사용하기
 
 redux api와 react-redux api를 구분
 
@@ -105,7 +105,7 @@ combineReducers({ todos: myTodoReducer, counter: myCounterReducer })
   - `mapStateToProps(state)`: `store`의 state를 `props`로 변경하여 내려줄 수 있는 함수
   - `mapDispatchToProps(actionsCreator, dispatch)`: `store`의 `dispatch()`함수를 사용하여 `actionCreator()`함수를 감싸서 `props`로 제공하는 함수
 
-## 8. Redux middleware
+## 3. Redux middleware
 
 ### logger middleware
 
