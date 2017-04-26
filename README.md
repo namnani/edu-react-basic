@@ -26,25 +26,25 @@
 
 ## 목차
 
-### React 이해
+### [React 이해](https://oss.navercorp.com/youngje-yun/edu-react-basic/wiki/React-%EC%9D%B4%ED%95%B4)
 
 1. React Element & React Component
-1. JSX 이해 
-1. React Component 이해 
-- lifecycle method 
-- properties 
-1. ReactDOM/ReactDOMServer 이해 
-- render, renderToString, renderToStaticMarkup 비교 
-1. React event handling 이해 
+1. JSX 이해
+1. React Component 이해
+  - lifecycle method
+  - properties
+1. ReactDOM/ReactDOMServer 이해
+  - render, renderToString, renderToStaticMarkup 비교
+1. React event handling 이해
 1. React에서의 DOM 제어
 1. Context 소개
-1. React 방식으로 사고하기 - Thinking in React 
+1. React 방식으로 사고하기 - Thinking in React
 
-### Redux 이해 
+### [Redux 이해](https://oss.navercorp.com/youngje-yun/edu-react-basic/wiki/Redux-%EC%9D%B4%ED%95%B4)
 
-1. Redux 이해하기 
-- action & actionCreator 
-- reducer 
-- store 
-1. React와 Redux 사용하기 
+1. Redux 이해하기
+  - action & actionCreator
+  - reducer
+  - store
+1. React와 Redux 사용하기
 1. Redux middleware
