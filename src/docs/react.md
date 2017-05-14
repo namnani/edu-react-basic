@@ -1,3 +1,5 @@
+`@es2015/es2015`
+
 # React 이해
 
 React?
@@ -73,6 +75,8 @@ f(data) = View
 
 ## 2. JSX 이해
 
+- [playground](https://babeljs.io/repl/#?babili=false&evaluate=true&lineWrap=false&presets=es2015%2Creact%2Cstage-0&targets=&browsers=&builtIns=false&debug=false&code=const%20a%20%3D%20%3Cdiv%3Etest%3C%2Fdiv%3E%0A)
+
 ```js
 const hello = <h1 className='greeting'>Hello World!</h1>;
 ```
@@ -117,11 +121,9 @@ function oddOrEven(props) {
 
 ### 주의 사항
 
-`@jsx/caution`
-
 - JSX 코드 scope 안에 React 선언 필요
-- props의 기본값은 true
-- Single parent(16.0에서 개선 예정)
+- props의 기본값은 true `@jsx/caution`
+- Single parent(16.0에서 개선 예정) `@jsx/caution`
 - Array로 반환하는 경우 `key` prop을 꼭 추가한다 `@jsx/list`
 - 실제 DOM은 아니다
 - white space `@jsx/whitespace`
@@ -158,7 +160,7 @@ function oddOrEven(props) {
 
 ### Other APIs
 
-- setState() `@reactComponent/setState`
+- `setState()` `@reactComponent/setState`
   - 비동기로 동작 한다.
 
   ```js
@@ -170,14 +172,14 @@ function oddOrEven(props) {
   });
   ```
 
-- forceUpdate()
+- `forceUpdate()`
   - 강제로 `render()` 호출
   - 되도록 사용하지 않는 것이 좋음
 
 ### Class properties
 
-- defaultProps `@reactComponent/defaultProps`
-- displayName
+- `defaultProps` `@reactComponent/defaultProps`
+- `displayName`
   - debugging 에 사용됨. JSX 자동 설정
 
 ### Instance Properties
@@ -191,7 +193,7 @@ function oddOrEven(props) {
 
 ### ReactDOM
 
-- render()
+- `render()`
 
 `@jsx/jsx`
 
@@ -203,13 +205,13 @@ ReactDOM.render(
 )
 ```
 
-- unmountComponentAtNode()
+- `unmountComponentAtNode()`
 
 ```js
 ReactDOM.unmountComponentAtNode(containerDOM)
 ```
 
-- findDOMNode(): ref로 대체 가능, functional component 사용 안됨
+- `findDOMNode()`: ref로 대체 가능, functional component 사용 안됨
 
 ```js
 ReactDOM.findDOMNode(component)
@@ -219,17 +221,19 @@ ReactDOM.findDOMNode(component)
 
 `@render/serverRender`
 
-- renderToString()
+- `renderToString()`
   - server rendering 후 client rendering 시 재사용
-- renderToStaticMarkup()
+- `renderToStaticMarkup()`
   - 단순 static 마크업 생성
 
-## 5. React event handling 이해
+## 5. React event handling 이해 [#](https://facebook.github.io/react/docs/events.html)
 
 - 실제 DOM element의 event handling과 비슷
+- event callback 함수에 전달되는 event 객체는 React에서 합성한 event 객체
+- 실제 event 객체에 접근하기 위해서는 `e.nativeEvent` 사용
 - 차이
   - event명은 camelCase: ex) onClick
-  - string이 아닌 실제 function 전달
+  - `string`이 아닌 실제 `function` 전달
   - default 동작을 막기 위해서 `return false` 사용 불가
     - 대안 `e.preventDefault()` `@event/preventDefault`
 
@@ -249,7 +253,7 @@ ReactDOM.findDOMNode(component)
 
 ## 6. React에서의 DOM 제어(Refs and DOM)
 
-refs 사용하기 좋은 곳
+`refs` 사용하기 좋은 곳
 
 - animation 제어를 해야할 때
 - focus, text 선택 제어가 필요할 때(DOM API 호출을 해야할 때)
@@ -317,8 +321,15 @@ refs 사용하기 좋은 곳
   - DOM 조작을 React와 library에서 같이 하는 일이 없도록 주의
   - 예시: [플레이스에서 jindo 사용 예제](https://oss.navercorp.com/bizServiceLab/sogum-next/blob/9eabbf5f175cfa3822c433e40917488efe23a55f/src/components/commons/ContentFlicking/ContentFlicking.js)
 
+### lint
+
+- eslint 권장
+  - [airbnb 가이드](https://github.com/airbnb/javascript)
+  - [naver 가이드](https://github.com/naver/eslint-config-naver)
+
 ## 추가로 읽으면 좋은 글
 
 - [React 공식 문서](https://facebook.github.io/react/docs/hello-world.html)
 - [React 적용 가이드 - React 작동 방법](http://d2.naver.com/helloworld/9297403)
+- [Awesome React](https://github.com/enaqx/awesome-react)
 - [Functional setState is the future of React](https://medium.freecodecamp.com/functional-setstate-is-the-future-of-react-374f30401b6b?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)

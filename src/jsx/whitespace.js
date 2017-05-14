@@ -4,13 +4,16 @@ import console from '../util/console'
 
 const whiteSpaceTest = [
   <div>Hello World</div>,
+
   <div>
     Hello World
   </div>,
+
   <div>
     Hello
     World
   </div>,
+
   <div>
 
     Hello World

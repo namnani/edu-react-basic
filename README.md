@@ -24,6 +24,11 @@
 
 - 예제 코드는 [Create React App](https://github.com/facebookincubator/create-react-app) 기반으로 만들어졌습니다.
 
+## 사전 학습
+
+- [React 소개](http://share.navercorp.com/react_intro)
+- ES2015+ (모든 코드는 `ES2015+`로 작성되었습니다)
+
 ## 목차
 
 ### [React 이해](https://oss.navercorp.com/youngje-yun/edu-react-basic/wiki/React-%EC%9D%B4%ED%95%B4)

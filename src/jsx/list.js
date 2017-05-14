@@ -2,42 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const baseballTeams = [
-  { name: 'kt', rank: 1, games: 8, win: 7, draw: 0, lose: 1 },
-  { name: 'LG', rank: 2, games: 8, win: 6, draw: 0, lose: 2 },
-  { name: 'KIA', rank: 2, games: 8, win: 6, draw: 0, lose: 2 },
-  { name: '롯데', rank: 2, games: 8, win: 6, draw: 0, lose: 2 },
-  { name: '두산', rank: 5, games: 8, win: 3, draw: 0, lose: 5 },
-  { name: 'NC', rank: 5, games: 8, win: 3, draw: 0, lose: 5 },
-  { name: '넥센', rank: 5, games: 8, win: 3, draw: 0, lose: 5 },
-  { name: '한화', rank: 5, games: 8, win: 3, draw: 0, lose: 5 },
-  { name: 'SK', rank: 9, games: 8, win: 2, draw: 0, lose: 6 },
-  { name: '삼성', rank: 10, games: 8, win: 1, draw: 0, lose: 7 }
+  { name: 'KIA', rank: 1, games: 38, win: 25, draw: 0, lose: 13 },
+  { name: 'LG', rank: 2, games: 37, win: 23, draw: 0, lose: 14 },
+  { name: 'NC', rank: 3, games: 37, win: 22, draw: 1, lose: 14 },
+  { name: '두산', rank: 4, games: 36, win: 18, draw: 1, lose: 17 },
+  { name: '넥센', rank: 5, games: 37, win: 18, draw: 1, lose: 18 },
+  { name: 'SK', rank: 5, games: 37, win: 18, draw: 1, lose: 18 },
+  { name: 'kt', rank: 7, games: 38, win: 18, draw: 0, lose: 20 },
+  { name: '한화', rank: 8, games: 37, win: 17, draw: 0, lose: 20 },
+  { name: '롯데', rank: 9, games: 36, win: 16, draw: 0, lose: 20 },
+  { name: '삼성', rank: 10, games: 37, win: 7, draw: 2, lose: 28 }
 ];
 
-const TeamRow = ({ team }) => {
-  const { name, rank, games, win, draw, lose } = team;
-
-  return (
-    <tr>
-      <th scope="row"><span>{rank}</span></th>
-      <td>
-        <div className="wrap">
-          <div className="info">
-            <span className="name">{name}</span>
-          </div>
-        </div>
-      </td>
-      <td><span>{games}</span></td>
-      <td><span>{win}</span></td>
-      <td><span>{draw}</span></td>
-      <td><span>{lose}</span></td>
-    </tr>
-  );
-}
-
 const TeamRank = ({ teams }) => {
-  const teamList = teams.map((team, index) => <TeamRow key={index} team={team} />)
-
   return (
     <div className="hmb_tbl">
       <table className="kbo">
@@ -53,7 +30,20 @@ const TeamRank = ({ teams }) => {
           </tr>
         </thead>
         <tbody>
-          {teamList}
+          <tr>
+            <th scope="row"><span>2</span></th>
+            <td>
+              <div className="wrap">
+                <div className="info">
+                  <span className="name">LG</span>
+                </div>
+              </div>
+            </td>
+            <td><span>37</span></td>
+            <td><span>23</span></td>
+            <td><span>0</span></td>
+            <td><span>14</span></td>
+          </tr>
         </tbody>
       </table>
     </div>

@@ -4,6 +4,7 @@ import console from '../util/console';
 
 const Anchor = ({ children }) => {
   const handleClick = (e) => {
+    // console.log(e.nativeEvent)
     e.preventDefault();
     console.log('클릭!!!!');
   }
