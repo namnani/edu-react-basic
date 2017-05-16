@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import console from '../util/console';
-// import Child from './Child';
+import Child from './Child';
 
 const log = console.highlightWith('red');
 const componentName = 'Parent';
@@ -14,9 +14,9 @@ class Parent extends Component {
     log(componentName, 'constructor');
   }
 
-  componentWillMount() {
-    log(componentName, 'componentWillMount');
-  }
+  // componentWillMount() {
+  //   log(componentName, 'componentWillMount');
+  // }
 
   // render() {}
 

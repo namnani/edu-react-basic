@@ -1,8 +1,9 @@
-import React from 'react';
+/* eslint no-unused-vars: off, react/prefer-stateless-function: off, react/no-multi-comp: off */
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-class GrandChild extends React.Component {
+class GrandChild extends Component {
   render() {
     return (
       <div>GrandChild {this.context.name}</div>
@@ -14,7 +15,7 @@ GrandChild.contextTypes = {
   name: PropTypes.string
 }
 
-class Child extends React.Component {
+class Child extends Component {
   render() {
     return (
       <div>
@@ -25,7 +26,7 @@ class Child extends React.Component {
   }
 }
 
-class Parent extends React.Component {
+class Parent extends Component {
   getChildContext() {
     return { name: this.props.name };
   }

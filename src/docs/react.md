@@ -251,7 +251,7 @@ ReactDOM.findDOMNode(component)
 - `addEventLinstener()` 사용할 필요 없음
 - function을 prop으로 전달하는 경우 re-render를 피하기 위해 jsx inline function 바로 사용은 좋지 않음 `@event/inlineFunction`
 
-## 6. React에서의 DOM 제어(Refs and DOM)
+## 6. React에서의 DOM 제어(Refs and DOM) [#](https://facebook.github.io/react/docs/refs-and-the-dom.html)
 
 `refs` 사용하기 좋은 곳
 
@@ -308,7 +308,7 @@ ReactDOM.findDOMNode(component)
 - Mock 준비
 - 화면을 나눠서 컴포넌트 만들기
 - 정적(static) 버전 만들기(state 사용 금지)
-- state와 props 구별
+- state와 props 구별 [#cheatsheet](https://twitter.com/dan_abramov/status/749710501916139520)
 
 ## Tip
 

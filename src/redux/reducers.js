@@ -1,3 +1,4 @@
+/* eslint no-unused-vars:off */
 import { combineReducers } from 'redux';
 import console from '../util/console';
 
