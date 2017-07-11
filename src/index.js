@@ -1,7 +1,7 @@
 /* eslint no-unused-vars: off, import/first: off */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 
 /* default */
 import App from './App';
@@ -64,3 +64,6 @@ ReactDOM.render(
 
 /* redux with react-redux */
 // import redux from './redux/counter/reduxWithProvider';
+
+/* calculator */
+// import index from './example/calculator/index'
