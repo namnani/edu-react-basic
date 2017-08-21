@@ -27,13 +27,22 @@ class TitleList extends Component {
   loadContent() {
     const requestUrl = `https://api.themoviedb.org/3/${this.props.url}&api_key=${apiKey}`
 
-    window.fetch(requestUrl).then((response) => response.json()
-    ).then((data) => {
-      this.setState({ data })
-    }).catch(() => {
-      console.log('There has been an error')
-    })
+    window.fetch(requestUrl)
+      .then((response) => response.json()
+      ).then((data) => {
+        this.setState({ data })
+      }).catch(() => {
+        console.log('There has been an error')
+      })
   }
+
+  // async loadContent() {
+  //   const requestUrl = `https://api.themoviedb.org/3/${this.props.url}&api_key=${apiKey}`
+
+  //   const response = await window.fetch(requestUrl)
+  //   const data = await response.json()
+  //   this.setState({ data })
+  // }
 
   render() {
     let titles = '';
