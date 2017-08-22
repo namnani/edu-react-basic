@@ -1,8 +1,12 @@
-`@es2015/es2015`
-
 # React 이해
 
-React?
+## 시작하기에 앞서
+
+[A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/ko/docs/A_re-introduction_to_JavaScript)
+
+`@es2015/es2015`
+
+## 0. React?
 
 ```js
 f(data) = View
@@ -309,6 +313,11 @@ ReactDOM.findDOMNode(component)
 - 화면을 나눠서 컴포넌트 만들기
 - 정적(static) 버전 만들기(state 사용 금지)
 - state와 props 구별 [#cheatsheet](https://twitter.com/dan_abramov/status/749710501916139520)
+
+## 9. 실습
+
+- 계산기: `@example/calculator` https://ahfarmer.github.io/calculator/
+- netflix style view: `@example/netflix`
 
 ## Tip
 

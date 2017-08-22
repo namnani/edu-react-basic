@@ -1,7 +1,6 @@
 import React from 'react'
 import Logo from './Logo'
 import './App.css'
-import Navigation from './Navigation'
 import UserProfile from './UserProfile'
 import Hero from './Hero'
 import TitleList from './TitleList'
@@ -33,7 +32,6 @@ class App extends React.Component {
       <div>
         <header className="Header">
           <Logo />
-          {/* <Navigation /> */}
           <div id="search" className="Search">
             <input
               onKeyUp={this.handleKeyUp}

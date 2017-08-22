@@ -20,6 +20,9 @@ ReactDOM.render(
 /* caution */
 // import caution from './jsx/caution';
 
+/* list example */
+// import list from './jsx/listExample';
+
 /* list */
 // import list from './jsx/list';
 

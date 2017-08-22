@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import Button from './Button';
 import './ButtonPanel.css';
 
@@ -39,7 +40,9 @@ class ButtonPanel extends React.Component {
     );
   }
 }
+
 ButtonPanel.propTypes = {
-  clickHandler: React.PropTypes.func,
+  clickHandler: PropTypes.func,
 };
+
 export default ButtonPanel;
