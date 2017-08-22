@@ -238,8 +238,9 @@ p {
 .Hero {
   width: 100%;
   position: relative;
-  background-size: cover;
-  min-height: 800px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 600px;
 }
 .Hero .content {
   position: relative;

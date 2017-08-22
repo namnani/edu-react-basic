@@ -4,12 +4,20 @@ import './App.css'
 import UserProfile from './UserProfile'
 import Hero from './Hero'
 import TitleList from './TitleList'
+// import TitleList from './TitleListExample'
+// import TitleList from './TitleListStaticExample'
 
 export const apiKey = '87dfa1c669eea853da609d4968d294be'
 
 class App extends React.Component {
   constructor() {
     super()
+
+    this.user = {
+      name: 'Young-je',
+      img: 'http://d2.naver.com/image/20170404/486366833803.png',
+    }
+
     this.state = {
       searchTerm: '',
       searchUrl: '',
@@ -41,11 +49,11 @@ class App extends React.Component {
               value={this.state.searchTerm}
             />
           </div>
-          <UserProfile />
+          <UserProfile user={this.user} />
         </header>
         <Hero />
         <TitleList title="Search Results" url={this.state.searchUrl} />
-        <TitleList title="Top TV picks for Young-je" url='discover/tv?sort_by=popularity.desc&page=1' />
+        <TitleList title={`Top TV picks for ${this.user.name}`} url='discover/tv?sort_by=popularity.desc&page=1' />
         <TitleList title="Trending now" url='discover/movie?sort_by=popularity.desc&page=1' />
         <TitleList title="Most watched in Horror" url='genre/27/movies?sort_by=popularity.desc&page=1' />
         <TitleList title="Sci-Fi greats" url='genre/878/movies?sort_by=popularity.desc&page=1' />

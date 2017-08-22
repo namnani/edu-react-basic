@@ -318,6 +318,8 @@ ReactDOM.findDOMNode(component)
 
 - 계산기: `@example/calculator` https://ahfarmer.github.io/calculator/
 - netflix style view: `@example/netflix`
+  1. `@example/netflix/App.js`의 `TitleStaticExample` 이용하여 정적 버전 그리기
+  1. `@example/netflix/App.js`의 `TitleExample` 이용하여 비동기 통신 결과 그리기 
 
 ## Tip
 

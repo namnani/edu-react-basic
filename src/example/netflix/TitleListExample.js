@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react'
 import { apiKey } from './App'
 import Item from './Item'
 
+// TODO loadContent 한 결과물 render 하기
+
 class TitleList extends PureComponent {
   constructor() {
     super()
@@ -26,7 +28,7 @@ class TitleList extends PureComponent {
   //   window.fetch(requestUrl)
   //     .then((response) => response.json()
   //     ).then((data) => {
-  //       this.setState({ titles: data.results })
+  //       this.setState({ data: data.results })
   //     }).catch(() => {
   //       console.log('There has been an error')
   //     })
@@ -37,22 +39,17 @@ class TitleList extends PureComponent {
 
     const response = await window.fetch(requestUrl)
     const data = await response.json()
-    this.setState({ titles: data.results })
+
+    console.log(data.results)
   }
 
   render() {
-    const { titles } = this.state
-
-    if (!titles || titles.length === 0) return null
-
     return (
       <div className="TitleList" data-loaded>
         <div className="Title">
           <h1>{this.props.title}</h1>
           <div className="titles-wrapper">
-            {titles.slice(0, 5).map((item) => (
-              <Item key={item.id} item={item} />
-            ))}
+            {/* loadContent()로 호출한 data render 하기 */}
           </div>
         </div>
       </div>

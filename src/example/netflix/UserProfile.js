@@ -1,12 +1,12 @@
 import React from 'react'
 
-const UserProfile = () => (
+const UserProfile = ({ user }) => (
   <div className="UserProfile">
     <div className="User">
-      <div className="name">Young-je</div>
+      <div className="name">{user.name}</div>
       <div className="image">
         <img
-          src="http://d2.naver.com/image/20170404/486366833803.png"
+          src={user.img}
           alt="profile"
         />
       </div>

@@ -1,15 +1,15 @@
 /* eslint no-unused-vars: off, import/first: off */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 
 /* default */
-import App from './App';
+// import App from './App';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('root')
+// );
 
 /* jsx */
 // import jsx from './jsx/jsx';
@@ -72,4 +72,4 @@ ReactDOM.render(
 // import index from './example/calculator/index'
 
 /* netflix */
-// import index from './example/netflix/index'
+import index from './example/netflix/index'
