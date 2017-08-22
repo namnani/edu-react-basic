@@ -50,7 +50,7 @@ class TitleList extends PureComponent {
         <div className="Title">
           <h1>{this.props.title}</h1>
           <div className="titles-wrapper">
-            {titles.slice(0, 5).map((item) => (
+            {titles.slice(0, 3).map((item) => (
               <Item key={item.id} item={item} />
             ))}
           </div>

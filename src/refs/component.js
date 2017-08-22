@@ -4,7 +4,7 @@ import TextInput from './dom';
 
 class AutoFocusTextInput extends React.Component {
   componentDidMount() {
-    this.textInput.focus();
+    this.textInput.focusInput();
   }
 
   render() {

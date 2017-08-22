@@ -111,7 +111,7 @@ var hello = React.createElement(
 - `if`, `for`, `while` 같은 제어는 밖에서 사용해야함
 
 ```js
-function oddOrEven(props) {
+function OddOrEven(props) {
   let type;
   if (props.number % 2 === 0) {
     type = <strong>짝수</strong>;
@@ -344,3 +344,4 @@ ReactDOM.findDOMNode(component)
 - [React 적용 가이드 - React 작동 방법](http://d2.naver.com/helloworld/9297403)
 - [Awesome React](https://github.com/enaqx/awesome-react)
 - [Functional setState is the future of React](https://medium.freecodecamp.com/functional-setstate-is-the-future-of-react-374f30401b6b?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+- [Find starter project](http://andrewhfarmer.com/starter-project/)

@@ -2,8 +2,8 @@ import React from 'react'
 import ListToggle from './ListToggle'
 
 const Item = ({ item }) => {
-  const { name, score, overview, original_title: originalTitle, backdrop_path: backdropPath, poster_path: posterPath } = item
-  const backdrop = `http://image.tmdb.org/t/p/original${backdropPath || posterPath}`;
+  const { name, score, overview, original_title: originalTitle, backdrop_path: backdropPath } = item
+  const backdrop = `http://image.tmdb.org/t/p/original${backdropPath}`;
   const title = name || originalTitle
 
   return (
