@@ -4,12 +4,12 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 
 /* default */
-// import App from './App';
+import App from './App';
 
-// ReactDOM.render(
-//   <App />,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
 
 /* jsx */
 // import jsx from './jsx/jsx';
@@ -72,4 +72,4 @@ import ReactDOM from 'react-dom';
 // import index from './example/calculator/index'
 
 /* netflix */
-import index from './example/netflix/index'
+// import index from './example/netflix/index'
