@@ -53,13 +53,11 @@ f(data) = View
 - React element tree를 encapsulate
 
 ```js
-{
-  type: Button,
-  props: {
-    color: 'blue',
-    children: 'OK!'
-  }
-}
+  <button className='button button-blue'>
+    <b>
+      OK!
+    </b>
+  </button>
 ```
 
 ```js
@@ -73,6 +71,22 @@ f(data) = View
         children: 'OK!'
       }
     }
+  }
+}
+```
+
+```js
+  <Button color='blue'>
+    OK!
+  </Button>
+```
+
+```js
+{
+  type: Button,
+  props: {
+    color: 'blue',
+    children: 'OK!'
   }
 }
 ```
@@ -106,7 +120,7 @@ var hello = React.createElement(
 
 `@jsx/jsx`
 
-- `key={value}` 형태로 전달
+- `key={value}` 형태로 전달 (단, string은 `''`나 `""` 사용 가능)
 - `{}` 영역은 javascript expressions를 자유롭게 사용 가능
 - `if`, `for`, `while` 같은 제어는 밖에서 사용해야함
 
