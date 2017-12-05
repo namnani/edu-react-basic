@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: off */
 import React from 'react'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
@@ -25,6 +26,13 @@ const OddOrEven = ({ number }) => {
   return <div>{number}은 {type}입니다.</div>;
 }
 
+const Message = (props) => {
+  const greetingMessage = { name: '영제', message: 'javascript' }
+  
+  // return <Greeting name={greetingMessage.name} message={greetingMessage.message} />
+  return <Greeting {...greetingMessage} />
+}
+
 window.jsx = {
   helloElement,
   helloWrapper,
@@ -34,5 +42,6 @@ window.jsx = {
 
 ReactDOM.render(
   <h1>Hello!</h1>,
-  document.getElementById('root')
+  document.getElementById('root'),
+  // () => { console.log('React Render complete!') }
 );

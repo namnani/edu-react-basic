@@ -22,44 +22,6 @@ f(data) = View
 
 - `type`과 `props`를 가지는 객체
 
-  ```js
-  {
-    type: 'button',
-    props: {
-      className: 'button button-blue',
-      children: {
-        type: 'b',
-        props: {
-          children: 'OK!'
-        }
-      }
-    }
-  }
-  ```
-
-- syntatic sugar => jsx
-
-  ```js
-  <button className='button button-blue'>
-    <b>
-      OK!
-    </b>
-  </button>
-  ```
-
-### React Component
-
-- `props`를 전달 받아 `React Element`를 반환하는 function 혹은 class
-- React element tree를 encapsulate
-
-```js
-  <button className='button button-blue'>
-    <b>
-      OK!
-    </b>
-  </button>
-```
-
 ```js
 {
   type: 'button',
@@ -75,6 +37,54 @@ f(data) = View
 }
 ```
 
+- syntatic sugar => jsx
+
+```js
+<button className='button button-blue'>
+  <b>
+    OK!
+  </b>
+</button>
+```
+```js
+React.createElement(
+  'button',
+  { className: 'button button-blue' },
+  React.createElement(
+    'b',
+    null,
+    'OK!'
+  )
+);
+```
+
+### React Component
+
+- `props`를 전달 받아 `React Element`를 반환하는 function 혹은 class
+- React element tree를 encapsulate
+
+```js
+function Button(props) {
+  return (
+    <button className={`button button-${props.color}`}>
+      <b>
+        OK!
+      </b>
+    </button>
+  )
+}
+
+or
+
+const Button = ({ color = 'blue' }) => (
+  <button className={`button button-${color}`}>
+    <b>
+      OK!
+    </b>
+  </button>
+)
+```
+
 ```js
   <Button color='blue'>
     OK!
@@ -82,6 +92,12 @@ f(data) = View
 ```
 
 ```js
+React.createElement(
+  Button,
+  { color: 'blue' },
+  'OK!'
+);
+
 {
   type: Button,
   props: {
@@ -107,14 +123,15 @@ var hello = React.createElement(
 );
 ```
 
-- jsx는 React Element (html + js)
-- javascript 들어가야 하는 부분에 `{}` 넣고 사용
+- jsx는 React Element(html 형태를 한 js object)
+- javascript 표현식 들어가야 하는 부분에 `{}` 넣고 사용
 
 ### 태그 규칙
 
-- 기본 html 태그는 소문자로 시작(React.DOM)
+- 기본 html 태그는 소문자로 시작
 - 사용자 정의 Component는 대문자로 시작
 - HTML과 달리 모든 태그는 self-closing 가능
+- 자식 태그를 가질 수 있음
 
 ### props
 
@@ -123,6 +140,7 @@ var hello = React.createElement(
 - `key={value}` 형태로 전달 (단, string은 `''`나 `""` 사용 가능)
 - `{}` 영역은 javascript expressions를 자유롭게 사용 가능
 - `if`, `for`, `while` 같은 제어는 밖에서 사용해야함
+- `...` 사용하여 object를 전달 가능
 
 ```js
 function OddOrEven(props) {
@@ -140,21 +158,22 @@ function OddOrEven(props) {
 ### 주의 사항
 
 - JSX 코드 scope 안에 React 선언 필요
-- props의 기본값은 true `@jsx/caution`
-- Single parent(16.0에서 개선 예정) `@jsx/caution`
+- props의 기본값은 true `@jsx/defaultProps`
 - Array로 반환하는 경우 `key` prop을 꼭 추가한다 `@jsx/list`
-- 실제 DOM은 아니다
+- Single parent(16.0에서 개선) `@jsx/fragment`
+- 실제 DOM은 아니다.(Virtual DOM)
+- XSS(cross-stie-scripting) 대응을 기본적으로 하기 위해 html escape 함 [#](https://reactjs.org/docs/introducing-jsx.html#jsx-prevents-injection-attacks)
 - white space `@jsx/whitespace`
+- conditional jsx `@jsx/conditionalJsx`
 
 ## 3. React Component 이해 [#](https://facebook.github.io/react/docs/react-component.html)
 
-### Component 구현 3가지 방법
+### Component 구현 2가지 방법
 
 `@reactComponent/create`
 
 1. Extends React.Component(or React.PureComponent)
 1. Functional Component(Stateless Component)
-1. [React.createClass(deprecated)](https://facebook.github.io/react/blog/#migrating-from-react.createclass)
 
 ### lifecycle method
 
@@ -196,7 +215,9 @@ function OddOrEven(props) {
 
 ### Class properties
 
-- `defaultProps` `@reactComponent/defaultProps`
+`@reactComponent/classProperties`
+
+- `defaultProps`
 - `displayName`
   - debugging 에 사용됨. JSX 자동 설정
 
@@ -223,6 +244,20 @@ ReactDOM.render(
 )
 ```
 
+- `hydrate()`
+  - `render()`와 기능은 동일. 단,`ReactDOMServer.renderToString()` 결과 재활용
+  - server render와 달라지는 내용을 `suppressHydrationWarning={true} ` 통해서 1 depth 무시 가능
+
+`@reactDom/hydrate`
+
+```js
+ReactDOM.hydrate(
+  reactElement,
+  containerDOM,
+  [callback]
+)
+```
+
 - `unmountComponentAtNode()`
 
 ```js
@@ -234,6 +269,16 @@ ReactDOM.unmountComponentAtNode(containerDOM)
 ```js
 ReactDOM.findDOMNode(component)
 ```
+
+- `createPortal()` [#](https://reactjs.org/docs/react-dom.html#createportal): react root DOM node 외부에 React Element 그리기
+
+`@reactDom/portal`
+
+```js
+ReactDOM.createPortal(child, container)
+```
+
+활용예시: [codepen](https://codepen.io/davidgilbertson/pen/xPVMqp?editors=0110)
 
 ### ReactDOMServer
 

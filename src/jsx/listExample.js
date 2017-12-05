@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import '../index.css';
 
 const baseballTeams = [
   { name: 'KIA', rank: 1, games: 38, win: 25, draw: 0, lose: 13 },

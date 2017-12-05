@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import console from '../util/console';
+import '../index.css';
 
 class Child extends React.PureComponent {
   render() {
@@ -25,7 +26,7 @@ class Parent extends React.PureComponent {
     return (
       <div>
         <div onClick={this.update}>Parent</div>
-        <Child handleClick={() => console.log('클릭!!!!')}>
+        <Child handleClick={this.handleClick}>
           {this.props.children}
         </Child>
       </div>

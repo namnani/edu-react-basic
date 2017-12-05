@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import '../index.css';
 
 class TextInput extends React.Component {
-  focus = () => {
+  focusInput = () => {
     this.textInput.focus();
   }
 

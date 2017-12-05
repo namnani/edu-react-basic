@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import console from '../util/console';
+import '../index.css';
 
 const Anchor = ({ children }) => {
   const handleClick = (e) => {

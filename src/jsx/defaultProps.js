@@ -10,15 +10,3 @@ ReactDOM.render(
   <TestElement test />,
   document.getElementById('root')
 )
-
-const InvalidElement = (
-  <div>하하</div>,
-  <div>호호</div>
-);
-
-const ValidElement = (
-  <div>
-    <div>하하</div>
-    <div>호호</div>
-  </div>
-);
