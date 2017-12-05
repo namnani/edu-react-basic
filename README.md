@@ -6,7 +6,7 @@
 - 코드 저장소 준비
   - 저장소 clone
 
-    `$ git clone https://oss.navercorp.com/youngje-yun/edu-react.git`
+    `$ git clone https://oss.navercorp.com/youngje-yun/edu-react-basic.git`
 
   - package 설치
 
