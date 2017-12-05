@@ -11,7 +11,7 @@
   - package 설치
 
     - `$ npm install -g yarn` // yarn 설치 안 되어 있을 경우 yarn 설치
-    - `$ cd edu-react && yarn install`
+    - `$ cd edu-react-basic && yarn install`
 
   - 실행
 
