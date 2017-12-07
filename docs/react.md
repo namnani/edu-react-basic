@@ -357,7 +357,7 @@ ReactDOM.createPortal(child, container)
 - `componentWillReceiveProps(nextProps, nextContext)`
 - `shouldComponentUpdate(nextProps, nextState, nextContext)`
 - `componentWillUpdate(nextProps, nextState, nextContext)`
-- `componentDidUpdate(prevProps, prevState, prevContext)`
+- `componentDidUpdate(prevProps, prevState)`
 
 ### Functional Component에서 접근
 
