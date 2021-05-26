@@ -1,7 +1,6 @@
-/* eslint no-unused-vars: off */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Parent from './Parent'
+import Parent from './Parent';
 import '../index.css';
 
 class Root extends Component {
@@ -27,4 +26,4 @@ class Root extends Component {
 ReactDOM.render(
   <Root />,
   document.getElementById('root')
-);
+)

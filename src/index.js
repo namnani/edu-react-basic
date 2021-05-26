@@ -5,10 +5,14 @@ import ReactDOM from 'react-dom';
 /* default */
 import App from './App';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('root')
+// );
+
+// import create from './reactComponent/create';
+// import timer from './reactComponent/timer';
+import y from './reactComponent/todoList'
 
 /* jsx */
 // import jsx from './jsx/jsx';

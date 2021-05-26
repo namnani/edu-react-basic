@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 
-const helloElement = <h1>Hello!</h1>;
+const helloElement = <h1>Hello2!</h1>;
 
 const helloWrapper = (
   <div>
@@ -12,12 +12,12 @@ const helloWrapper = (
 );
 
 const Greeting = ({ name = '아무개', message }) => (
-  <div>{name}님 {message}!</div>
-);
+  <div>{name}님님님님님 {message}!</div>
+); 
 
 const OddOrEven = ({ number }) => {
   let type;
-  if (number % 2 === 0) {
+  if (number %2 === 0) {
     type = <strong>짝수</strong>;
   } else {
     type = <i>홀수</i>;
@@ -27,9 +27,8 @@ const OddOrEven = ({ number }) => {
 }
 
 const Message = (props) => {
-  const greetingMessage = { name: '영제', message: 'javascript' }
-  
-  // return <Greeting name={greetingMessage.name} message={greetingMessage.message} />
+  const greetingMessage = { name: '영제', message: 'javascript'}
+
   return <Greeting {...greetingMessage} />
 }
 
@@ -41,7 +40,7 @@ window.jsx = {
 }
 
 ReactDOM.render(
-  <h1>Hello!</h1>,
+  <helloWrapper />,
   document.getElementById('root'),
-  // () => { console.log('React Render complete!') }
-);
+  () => {console.log('React Render complete!')}
+)

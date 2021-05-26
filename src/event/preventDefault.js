@@ -5,6 +5,7 @@ import '../index.css';
 
 const Anchor = ({ children }) => {
   const handleClick = (e) => {
+    // console.log(e)
     // console.log(e.nativeEvent)
     e.preventDefault();
     console.log('클릭!!!!');
@@ -18,6 +19,6 @@ const Anchor = ({ children }) => {
 };
 
 ReactDOM.render(
-  <Anchor>NAVER</Anchor>,
+  <Anchor children='NAVER2' />,
   document.getElementById('root')
 );

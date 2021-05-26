@@ -52,7 +52,7 @@ class Child extends Component {
       <div>
         <span>{componentName}</span>
         <span>Count: {this.props.count}</span>
-        <GrandChild count={this.props.count} />
+        {/* <GrandChild count={this.props.count} /> */}
       </div>
     );
   }

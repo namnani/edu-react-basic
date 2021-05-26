@@ -11,7 +11,7 @@ function getElementByType(type) {
   return elements[type];
 }
 
-const Message = getElementByType('hello');
+const Message = getElementByType('goodbye');
 console.log(ReactDOMServer.renderToStaticMarkup(<Message />));
 
 const AOrDiv = true ? 'a' : 'div';

@@ -1,4 +1,3 @@
-/* eslint react/no-multi-comp: off, react/prefer-stateless-function: off */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import console from '../util/console';
@@ -27,7 +26,8 @@ class Parent extends React.PureComponent {
       <div>
         <div onClick={this.update}>Parent</div>
         <Child handleClick={this.handleClick}>
-          {this.props.children}
+        {/* <Child handleClick={() => console.log('클릭!!!!')}> */}
+          {this.props.childRen}
         </Child>
       </div>
     )

@@ -4,17 +4,18 @@ import '../index.css';
 
 class Counter extends React.Component {
   render() {
-    return <div>count: {this.props.count}</div>;
+    const { count = 777 } = this.props
+    return <div>count: {count}</div>;
   }
 }
 
 Counter.defaultProps = {
-  count: 1
+  count: 3
 }
 
-Counter.displayName = 'Counter(with test)'
+Counter.displayName = 'Counter123(with test)'
 
 ReactDOM.render(
-  <Counter />,
+  <Counter count={'333px2'}/>,
   document.getElementById('root')
 );

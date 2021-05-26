@@ -12,9 +12,11 @@ class StateTest extends Component {
 
   increase = () => {
     this.setState({ count: this.state.count + 1 })
+    this.setState({ count: this.state.count + 1 })
   }
 
   asyncIncrease = () => {
+    this.setState((prevState) => ({ count: prevState.count + 1 }))
     this.setState((prevState) => ({ count: prevState.count + 1 }))
   }
 
@@ -23,7 +25,7 @@ class StateTest extends Component {
       <div className='set-state'>
         <div>Current Count: {this.state.count}</div>
         <button onClick={this.increase}>sync+1</button>
-        <button onClick={this.asyncIncrease}>async+1</button>
+        <button onClick = {this.asyncIncrease}>async+1</button>
       </div>
     )
   }

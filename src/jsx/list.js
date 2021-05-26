@@ -15,28 +15,32 @@ const baseballTeams = [
   { name: '삼성', rank: 10, games: 37, win: 7, draw: 2, lose: 28 }
 ];
 
-const TeamRow = ({ team }) => (
+const TeamRow = ({ team }) => {
+  const { rank, name, games, win, draw, lose } = team;
+
+  return (
   <tr>
-    <th scope="row"><span>{team.rank}</span></th>
+    <th scope="row"><span>{rank}</span></th>
     <td>
       <div className="wrap">
         <div className="info">
-          <span className="name">{team.name}</span>
+          <span className="nam">{name}</span>
         </div>
       </div>
     </td>
-    <td><span>{team.games}</span></td>
-    <td><span>{team.win}</span></td>
-    <td><span>{team.draw}</span></td>
-    <td><span>{team.lose}</span></td>
+    <td><span>{games}</span></td>
+    <td><span>{win}</span></td>
+    <td><span>{draw}</span></td>
+    <td><span>{lose}</span></td>
   </tr>
-)
+  )
+};
 
 const TeamRank = ({ teams }) => {
   const teamList = teams.map((team) => <TeamRow key={team.name} team={team} />)
 
   return (
-    <div className="hmb_tbl">
+    <div className = "hmb_tbl">
       <table className="kbo">
         <caption>2017 KBO리그 팀순위</caption>
         <thead>

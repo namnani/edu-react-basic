@@ -1,6 +1,5 @@
-/* eslint no-unused-vars: off */
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import console from '../util/console';
 import Child from './Child';
 
@@ -52,14 +51,14 @@ class Parent extends Component {
     log(componentName, 'componentWillUnmount');
   }
 
-  // update = () => {
-  //   this.setState({ test: !this.state.test })
-  // }
+  update = () => {
+    this.setState({ test: !this.state.test })
+  }
 
   render() {
     log(componentName, 'render');
     return (
-      <div>
+      <div onClick={this.update}>
         <span>{componentName}</span>
         <span>Count: {this.props.count}</span>
         {/* <Child count={this.props.count} /> */}
